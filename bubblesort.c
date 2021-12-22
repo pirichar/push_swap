@@ -136,7 +136,7 @@ int main(int argc, char **argv)
 	while(i < argc - 1)
 	{
 		//Need to find a way to work around the negatives
-		if (ft_strcmpr(argv[i], argv[i + 1]) > 0)
+		if (ft_atoi(argv[i]) > ft_atoi(argv[i + 1]))
 			{
 				tmp = argv[i + 1];
 				argv[i + 1] = argv[i];
