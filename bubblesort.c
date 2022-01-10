@@ -1,15 +1,17 @@
 #include <stdio.h>
+#include <limits.h>
+
 	/*if (ft_strcmpr(argv[1], argv[2]) == 0)
 		printf("Equal\n");
 	else if ((ft_strcmpr(argv[1], argv[2]) < 0))
 		printf("1 is smaller then 2\n");
 	else
 		printf("1 is bigger then 2\n");*/
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int	i;
 	int	n;
-	int	res;
+	long	res;
 
 	n = 1;
 	i = 0;
@@ -59,6 +61,11 @@ int	check_is_int(char *str)
 	int	i;
 
 	i = 0;
+	if (ft_atoi(str) < -2147483648 || ft_atoi(str) > 2147483647)
+	{
+		printf("You went too far or too low in the range\n");
+		return (0);
+	}
 	if (str[0] == '-')
 		i++;
 	while (str[i] != '\0')
@@ -76,21 +83,19 @@ int l4p(char **argv)
 	int i;
 	int j;
 
-	i = 0;
-	j = 1;
+	i = 1;
+	j = 2;
 
 	//argv[i] 0 is ./a.out 1 is the first number provided
 	while (argv[i])
 	{
     	while (argv[j])
 		{
-			// I HAVE TO CHANGE THIS THIS IS SHIET
 			if (check_is_int(argv[j]) == 0)
     			{
 					printf("You must provide numbers\n");
 					return(0);
 				}
-			// 
 			if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
 				{
 					printf("You have 2 numbers that are the same\n");
@@ -110,6 +115,9 @@ int main(int argc, char **argv)
 	int i;
 	char *tmp;
 
+	if (argc == 1)
+		return (0);
+		
 	if (argc < 3)
 	{
 		printf("Error, insert more then one digit to sort\n");
@@ -156,8 +164,8 @@ int main(int argc, char **argv)
 		i++;
 	}
 
-	/*testing my atoi
-	char *str = {"425"};
+	//testing my atoi
+	/*char *str = {"0"};
 	printf("This is my atoi %d\n",ft_atoi(str));*/
 
 }
