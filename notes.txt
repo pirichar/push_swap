@@ -1,0 +1,23 @@
+Donc il faudra que j'aille un fichier qui s'apelle l4p
+dans ça je devrais mettre les sous fonction de ça
+
+parse argv
+	l4p	- Vérifie si je n'ai que des ints qui ne sont pas les mêmes
+		static long ft_atoi
+		static int check_is_int
+	Check_if_in_order - vérifie si c'Est déjà dans le bon ordrer
+		-bubble sort ou quelque chose comme ça ? 
+		-If in order just return nothing
+	Quantify the array passed ?
+		- gather the input in an array ?
+		- Check if its greater then 3 ; 5 ; 100 **what ever the numbers are**
+	Trigger the right sort method ?
+		-Sort for less then X 
+		- Sor for more then X 
+
+
+
+probablement que j'auirais une fonction push et une swap ? 
+
+
+Je devrai peut-être aussi faire une autre sous fonction pour les 2 premier check ou les inclure

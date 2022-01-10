@@ -1,13 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-	/*if (ft_strcmpr(argv[1], argv[2]) == 0)
-		printf("Equal\n");
-	else if ((ft_strcmpr(argv[1], argv[2]) < 0))
-		printf("1 is smaller then 2\n");
-	else
-		printf("1 is bigger then 2\n");*/
-long	ft_atoi(const char *str)
+static long	ft_atoi(const char *str)
 {
 	int	i;
 	int	n;
@@ -32,31 +26,7 @@ long	ft_atoi(const char *str)
 	return (res * n);
 }
 
-int ft_strcmpr(char *s1, char *s2)
-{
-	int i ;
-	
-	i = 0;
-	while((unsigned char)s1[i] && (unsigned char)s1[i] == (unsigned char)s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
-
-//function to count how many args
-//start from 1 cuz of the a.out
-int	c_args(int argc)
-{
-	int i;
-
-	i = 1;
-	while(i < argc)
-	{
-		i++;
-	}
-	return (i);
-}
-
-int	check_is_int(char *str)
+static int	check_is_int(char *str)
 {
 	int	i;
 
@@ -115,22 +85,26 @@ int main(int argc, char **argv)
 	int i;
 	char *tmp;
 
+	//Maybe create a parse function with those 2 if and l4p ?
+	//Include in this parse function the l4p and its sub functions
+	//I could pass the argv to this function and do all the checking first
+	
 	if (argc == 1)
-		return (0);
-		
+		return (0);	
+
 	if (argc < 3)
 	{
 		printf("Error, insert more then one digit to sort\n");
 		return (0);
 	}
-
+	//here I say if the function look 4 problem returns 0 you break out
+	// I look for double; out of range and verify thats its real numbers provided
 	if(l4p(argv) == 0)
 	{
 		return (0);
 	}
 		
-
-	//printf shenanigan
+	//printf arguments order before the sort
 	i = 1;
 	while(i < argc)
 	{
@@ -143,7 +117,6 @@ int main(int argc, char **argv)
 	i = 1;
 	while(i < argc - 1)
 	{
-		//Need to find a way to work around the negatives
 		if (ft_atoi(argv[i]) > ft_atoi(argv[i + 1]))
 			{
 				tmp = argv[i + 1];
@@ -154,8 +127,7 @@ int main(int argc, char **argv)
 		else 
 			i++;
 	}
-
-	//printf shenanigan
+	//printf argument order after the sort
 	i = 1 ;
 	while(i < argc)
 	{
@@ -163,9 +135,4 @@ int main(int argc, char **argv)
 		printf("This is argv[%i] = %s\n", i, argv[i]);
 		i++;
 	}
-
-	//testing my atoi
-	/*char *str = {"0"};
-	printf("This is my atoi %d\n",ft_atoi(str));*/
-
 }
