@@ -6,20 +6,20 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/12 15:24:24 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/12 15:48:44 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init_arrays(int argc, char **argv, t_stack *array_a, t_stack *array_b)
+void	init_arrays(int argc, char **argv, t_stacks *arr)
 {
 
 	int i;
 	int j;
 
-	array_a->numbers = malloc(sizeof(char) * (argc - 1));
-	array_b->numbers = malloc(sizeof(char) * (argc - 1));	
+	arr->a.numbers = malloc(sizeof(char) * (argc - 1));
+	arr->b.numbers = malloc(sizeof(char) * (argc - 1));	
 	if (argc > 3)
 	{
 		//init array A
@@ -27,9 +27,9 @@ void	init_arrays(int argc, char **argv, t_stack *array_a, t_stack *array_b)
 		j = 1;
 		while(i >= 0)
 		{
-			array_a->numbers[i] = ft_atol(argv[j]);
-			printf("This is array_a->number[%d] = %d\n", i, array_a->numbers[i]);
-			array_a->count++;
+			arr->a.numbers[i] = ft_atol(argv[j]);
+			printf("This is arr->a.number[%d] = %d\n", i, arr->a.numbers[i]);
+			arr->a.count++;
 			i--;
 			j++;
 		}
@@ -45,14 +45,14 @@ void	init_arrays(int argc, char **argv, t_stack *array_a, t_stack *array_b)
 		i = 0;
 		while (tmp[i])
 		{
-			array_a->numbers[count - 1] = ft_atol(tmp[i]);
-			printf("This is array_a->number[%d] = %d\n", count-1, array_a->numbers[count-1]);
-			array_a->count++;
+			arr->a.numbers[count - 1] = ft_atol(tmp[i]);
+			printf("This is arr->a.number[%d] = %d\n", count-1, arr->a.numbers[count-1]);
+			arr->a.count++;
 			i++;
 			count--;
 		}	
 	}
-	printf("This is array_a->count = %d\n", array_a->count);
+	printf("This is arr->a.count = %d\n", arr->a.count);
 }
 
 //init small array 
