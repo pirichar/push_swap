@@ -8,25 +8,29 @@ make -C libft
 # -I. veut dire ya des .h dans le dossier dans lequel tu es
 gcc -Wall -Werror -Wextra -Llibft -lft -I. parse.c bubblesort.c init_arrays.c
 
-printf "\033[1;31mThis is the test  with 400 555 5 4 3 2 1 0\033[0m\n"
+printf "\033[1;31mThis is the test  with : \033[0;32m400 555 5 4 3 2 1 0\033[0m\n"
 ./a.out 400 555 5 4 3 2 1 0
-printf "\033[1;31mThis is the test  with 1\033[0m\n"
+printf "\033[1;31mThis is the test  with : \033[0;32m1\033[0m\n"
 ./a.out 1
-printf "\033[1;31mThis is the test with nothing\033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32mnothing\033[0m\n"
 ./a.out 
-printf "\033[1;31mThis is the test with 5 4 3 2 1 5\033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 5\033[0m\n"
 ./a.out 5 4 2 1 5
-printf "\033[1;31mThis is the test with 5 4 3 2 1 0 in a sentence \033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1 0\" in a sentence \033[0m\n"
 ./a.out "5 4 3 2 1 0"
-printf "\033[1;31mThis is the test with 5 4 3 2 1 0 TOTO in a sentence \033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m\"-2000 5 4 3 2 1 0\" in a sentence \033[0m\n"
+./a.out "-2000 5 4 3 2 1 0"
+printf "\033[1;31mThis is the test with : \033[0;32m\"-20000000000000 5 4 3 2 1 0\" in a sentence \033[0m\n"
+./a.out "-20000000000000 5 4 3 2 1 0"
+printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1 0 TOTO\" in a sentence \033[0m\n"
 ./a.out "5 4 3 2 1 0 TOTO"
-printf "\033[1;31mThis is the test with 5 4 3 2 1 0 TOTO not int a sentence\033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 TOTO not int a sentence\033[0m\n"
 ./a.out 5 4 3 2 1 0 TOTO
-printf "\033[1;31mThis is the test with -22222222222222222222 5 4 3 2 1 0 \033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m-22222222222222222222 5 4 3 2 1 0 \033[0m\n"
 ./a.out -22222222222222222222 5 4 3 2 1 0
-printf "\033[1;31mThis is the test with  5 4 3 2 1 0 -22222222222222222222\033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 -22222222222222222222\033[0m\n"
 ./a.out  5 4 3 2 1 0 -22222222222222222222
-printf "\033[1;31mThis is the test with  5 4 3 -22222222222222222222 2 1 0 \033[0m\n"
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 -22222222222222222222 2 1 0 \033[0m\n"
 ./a.out  5 4 3 -22222222222222222222 2 1 0 
-printf "\033[1;31mThis is the test  with 400 3 2 7 89 30009876 489032 12 -200 487909 -20000 0\033[0m\n"
+printf "\033[1;31mThis is the test  with : \033[0;32m400 3 2 7 89 30009876 489032 12 -200 487909 -20000 0\033[0m\n"
 ./a.out 400 3 2 7 89 30009876 489032 12 -200 487909 -20000

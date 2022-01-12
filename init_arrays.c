@@ -6,25 +6,23 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/12 14:17:23 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/12 15:24:24 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init_arrays(int argc, char **argv)
+void	init_arrays(int argc, char **argv, t_stack *array_a, t_stack *array_b)
 {
-	t_stack	*array_a;
-	t_stack	*array_b;
+
 	int i;
 	int j;
 
-	array_a = ft_calloc(1, sizeof(t_stack));
-	array_b = ft_calloc(1, sizeof(t_stack));
 	array_a->numbers = malloc(sizeof(char) * (argc - 1));
-	array_b->numbers = malloc(sizeof(char) * (argc - 1));
+	array_b->numbers = malloc(sizeof(char) * (argc - 1));	
 	if (argc > 3)
 	{
+		//init array A
 		i = argc - 2;
 		j = 1;
 		while(i >= 0)
@@ -35,6 +33,7 @@ void	init_arrays(int argc, char **argv)
 			i--;
 			j++;
 		}
+		//check if small or big sort and apply sort
 	}
 	if (argc == 2)
 	{

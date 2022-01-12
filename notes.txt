@@ -1,6 +1,40 @@
 Donc il faudra que j'aille un fichier qui s'apelle l4p
 dans ça je devrais mettre les sous fonction de ça
 
+
+OLD BUBBLE SORT MAIN:
+	
+	int i;
+	i = 1;
+
+	while(i < argc)
+	{
+		printf("----THE BEFORE PRINT------");
+		printf("This is argv[%i] = %s\n", i, argv[i]);
+		i++;
+	}
+	char *tmp;
+	i = 1;
+	while(i < argc - 1)
+	{
+		if (ft_atol(argv[i]) > ft_atol(argv[i + 1]))
+			{
+				tmp = argv[i + 1];
+				argv[i + 1] = argv[i];
+				argv[i] = tmp;
+				i = 1;
+			}
+		else 
+			i++;
+	}
+	i = 1 ;
+	while(i < argc)
+	{
+		printf("----THE AFTER PRINT----");
+		printf("This is argv[%i] = %s\n", i, argv[i]);
+		i++;
+	}
+
 Int main
 
 	parse argv
@@ -41,3 +75,16 @@ Selon mick :
 6- front est le dessus de la pile le dernier item déposé 
 7- back est le premier item de la pile 
 LE PREMIER ARGUMENT DU MAIN EST LE DERNIER DONC QUAND JE INIT JE DOIS PUSH BACK 
+
+
+
+
+Donc :
+
+Main 
+	check if more then one argument and parse the input
+
+	initits the arrays 
+
+	Check if in order
+

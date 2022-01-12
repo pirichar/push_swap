@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:25 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/12 13:50:22 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/12 14:44:42 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ int parse(int argc, char **argv)
 	{
 		while (argv[i])
 		{
+			if (check_is_int(argv[i]) == 0)
+    		{
+				printf("You must provide numbers\n");
+				return(0);
+			}
 			while (argv[j])
 			{
 				//probleme here if i compare with 0 ??? 
@@ -40,11 +45,6 @@ int parse(int argc, char **argv)
 						return (0);
 					}
 				j++;
-			}
-			if (check_is_int(argv[i]) == 0)
-    		{
-				printf("You must provide numbers\n");
-				return(0);
 			}
 			i++;
 			j = i + 1;
