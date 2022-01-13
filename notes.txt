@@ -85,6 +85,11 @@ Main
 	check if more then one argument and parse the input
 
 	initits the arrays 
+		init array a
+		init array b	
+		init array c (copy it from array A OR createa  function that sorts A and put it in C)
+			you might want to check if its in order at this moment ??
+		
 
 	Check if in order
 

@@ -6,8 +6,9 @@ make -C libft
 #-l le petit l dit link sur mon fichier ft
 # ca s'apelle ft parceque gcc sait que les librarires commencent toujours par lib
 # -I. veut dire ya des .h dans le dossier dans lequel tu es
-gcc -Wall -Werror -Wextra -Llibft -lft -I. parse.c bubblesort.c init_arrays.c
 
+gcc -Wall -Werror -Wextra -Llibft -lft -I. parse.c bubblesort.c init_arrays.c
+# TESTING THE INTPUT PART 
 printf "\033[1;31mThis is the test  with : \033[0;32m400 555 5 4 3 2 1 0\033[0m\n"
 ./a.out 400 555 5 4 3 2 1 0
 printf "\033[1;31mThis is the test  with : \033[0;32m1\033[0m\n"
