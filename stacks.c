@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:13:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/14 13:15:13 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/14 15:04:06 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	ft_wd_count(int argc, char **argv)
 	int	i;
 	char **tmp;
 
-	if (argc == 2 )//&& argv[1] != (void*)NULL )//&& s_argv1(argv) > 1)
+	if (argc == 2 )
 	{
 		tmp = ft_split(argv[1], ' ');
 		i = 0;
