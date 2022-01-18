@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:13:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/14 15:04:06 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/18 11:55:37 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void	print_all_stack(t_stacks *to_print)
 	i = 0;
 	while (i < to_print->a.count)
 	{
-		printf("\033[1;32m%-10d\033[1;0m ",to_print->a.numbers[i]);
-		printf("     \033[1;31m%-10d \033[1;32m    ",to_print->b.numbers[i]);
-		printf("     \033[1;33m%-10d\n\033[1;0m",to_print->c.numbers[i]);
+		printf("\033[1;32mA[%d] %-10d\033[1;0m ",i, to_print->a.numbers[i]);
+		printf("\033[1;31mB[%d]%-10d \033[1;0m    ",i,to_print->b.numbers[i]);
+		printf("\033[1;33mC[%d]%-10d\n\033[1;0m",i, to_print->c.numbers[i]);
 		i++;
 	}
 }

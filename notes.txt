@@ -114,6 +114,7 @@ Main
 		Check if in order
 
 	then :
+		change the value of A to its position in the stack ? 
 		In main first check the size;
 		Then check if in order
 		then sort with the algoritm

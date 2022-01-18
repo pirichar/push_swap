@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:35 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/17 13:36:41 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/18 11:24:14 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,7 @@ void	bubblesort_stack(t_stack *to_sort);
 void	print_a_stack(t_stack *to_print);
 void	print_all_stack(t_stacks *to_print);
 void	copy_stack(t_stack *src, t_stack *dst);
+
+void	pb(t_stacks *src);
+void	pa(t_stacks *src);
+

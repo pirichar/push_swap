@@ -7,7 +7,7 @@ make -C libft
 # ca s'apelle ft parceque gcc sait que les librarires commencent toujours par lib
 # -I. veut dire ya des .h dans le dossier dans lequel tu es
 
-gcc -Wall -Werror -Wextra -Llibft -lft -I. -g parse.c main.c init_stacks.c stacks.c
+gcc -Wall -Werror -Wextra -Llibft -lft -I. -g parse.c main.c init_stacks.c stacks.c push.c
 # TESTING THE INTPUT PART 
 printf "\033[1;31mThis is the test  with : \033[0;32m 1 2 3\033[0m\n"
 ./a.out 1 2 3
@@ -19,6 +19,8 @@ printf "\033[1;31mThis is the test with : \033[0;32mnothing\033[0m\n"
 ./a.out 
 printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 5\033[0m\n"
 ./a.out 5 4 2 1 5
+printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1\" in a sentence \033[0m\n"
+./a.out "5 4 3 2 1"
 printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1 0\" in a sentence \033[0m\n"
 ./a.out "5 4 3 2 1 0"
 printf "\033[1;31mThis is the test with : \033[0;32m\"-2000 5 4 3 2 1 0\" in a sentence \033[0m\n"
