@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 16:43:04 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/23 10:31:36 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/24 08:52:50 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,12 @@ int	find_0(t_stacks *stacks)
 	return (-1);
 }
 
-static void	sort_4(t_stacks *stacks)
+/*static void	sort_4(t_stacks *stacks)
 {
 	
 
 
-}
+}*/
 
 void	small_sort(t_stacks *stacks)
 {
