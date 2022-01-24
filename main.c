@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/18 12:08:23 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/23 10:13:48 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,18 @@ int	main(int argc, char **argv)
 	printf("I have a total of %d ints to play with\n", ft_wd_count(argc, argv));
 	init_stacks(argc, argv, &arr);
 	print_all_stack(&arr);
-	printf("This is the count of stack a = %d\n", arr.a.count);
-	printf("This is the count of stack b = %d\n", arr.b.count);
-	pb(&arr);
+	/*pb(&arr);
 	print_all_stack(&arr);
-	printf("This is the count of stack a = %d\n", arr.a.count);
-	printf("This is the count of stack b = %d\n", arr.b.count);
+	sa(&arr);
+	print_all_stack(&arr);
 	pa(&arr);
 	print_all_stack(&arr);
-	printf("This is the count of stack a = %d\n", arr.a.count);
-	printf("This is the count of stack b = %d\n", arr.b.count);
-	/*if (ft_wd_count(argc, argv) > 5)
-		b_sort(argc, argv)
-	else
-		s_sort(argc,argv)
-		*/
+	ra(&arr);
+	print_all_stack(&arr);*/
+
+	//Before to sort I should change the numbers of my stack A 
+	if(arr.a.count < 5)
+		small_sort(&arr);
+	/*(else
+		b_sort(&arr);*/
 }

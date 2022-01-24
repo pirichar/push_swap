@@ -76,6 +76,9 @@ Selon mick :
 7- back est le premier item de la pile 
 LE PREMIER ARGUMENT DU MAIN EST LE DERNIER DONC QUAND JE INIT JE DOIS PUSH BACK 
 
+count - 1 = le premier argument le plus petit 
+0 = le + grand élément
+
 
 
 
@@ -114,8 +117,11 @@ Main
 		Check if in order
 
 	then :
-		change the value of A to its position in the stack ? 
+		change the value of A to its position in the stack ?
+			fonction qui regarde le stack A et compare avec le stack C ou il se trouve
+			par la suite la fonction prend la position dans le array C et donne ce chiffre à A
 		In main first check the size;
+			EZ just take the 
 		Then check if in order
 		then sort with the algoritm
 

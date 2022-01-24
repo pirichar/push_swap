@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:13:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/18 11:55:37 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:49:25 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,6 @@ void	copy_stack(t_stack *src, t_stack *dst)
 		dst->numbers[i] = src->numbers[i];
 		dst->count++;
 		i++;
-	}
-}
-
-void	bubblesort_stack(t_stack *to_sort)
-{
-	int	i;
-	int	tmp;
-
-	i = 0;
-	while (i < to_sort->count - 1)
-	{
-		if (to_sort->numbers[i] > to_sort->numbers[i + 1])
-		{
-			tmp = to_sort->numbers[i + 1];
-			to_sort->numbers[i + 1] = to_sort->numbers[i];
-			to_sort->numbers[i] = tmp;
-			i = 0;
-		}
-		else
-			i++;
 	}
 }
 
@@ -62,28 +42,37 @@ void	print_a_stack(t_stack *to_print)
 void	print_all_stack(t_stacks *to_print)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (i < to_print->a.count)
+	j = to_print->c.count - 1;
+	while (j >= 0)
 	{
-		printf("\033[1;32mA[%d] %-10d\033[1;0m ",i, to_print->a.numbers[i]);
-		printf("\033[1;31mB[%d]%-10d \033[1;0m    ",i,to_print->b.numbers[i]);
-		printf("\033[1;33mC[%d]%-10d\n\033[1;0m",i, to_print->c.numbers[i]);
+		if (to_print->a.count > j)
+			printf("\033[1;32mA[%d] %-10d\033[1;0m ", i, to_print->a.numbers[j]);
+		else
+			printf("%16c", ' ');
+		if (to_print->b.count > j)
+			printf("\033[1;31mB[%d]%-10d \033[1;0m    ", i, to_print->b.numbers[j]);
+		else
+			printf("%19c", ' ');
+		printf("\033[1;33mC[%d]%-10d\n\033[1;0m", i, to_print->c.numbers[j]);
+		j--;
 		i++;
 	}
 }
 
 int	ft_wd_count(int argc, char **argv)
 {
-	int	i;
-	char **tmp;
+	int		i;
+	char	**tmp;
 
-	if (argc == 2 )
+	if (argc == 2)
 	{
 		tmp = ft_split(argv[1], ' ');
 		i = 0;
-		while(tmp[i])
-		i++;
+		while (tmp[i])
+			i++;
 		return (i);
 	}
 	i = 0;
