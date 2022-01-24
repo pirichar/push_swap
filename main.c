@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	print_all_stack(&arr);*/
 
 	//Before to sort I should change the numbers of my stack A 
-	if(arr.a.count < 5)
+	if(arr.a.count < 6)
 		small_sort(&arr);
 	/*(else
 		b_sort(&arr);*/

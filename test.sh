@@ -30,9 +30,82 @@ printf "\033[1;31mThis is the test  with : \033[0;32m 2 1 3\033[0m\n"
 printf "\033[1;31mThis is the test  with : \033[0;32m 1 2 3\033[0m\n"
 ./a.out 1 2 3
 printf "\033[1;31mThis is the test  with : \033[0;32m 1 3 2\033[0m\n"
-./a.out 3 2 1
-printf "\033[1;31mThis is the test  with : \033[0;32m 3 2 1\033[0m\n"
 ./a.out 1 3 2
+
+# TEST FOR 4
+printf "\n\n\e[1;94m------TESTING FOR 4 DIGITS------\e[0m\n\n"
+printf "\033[1;31mThis is the test  with : \033[0;32m 1 2 3 4\033[0m\n"
+./a.out 1 2 3 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 1 2 4 3\033[0m\n"
+./a.out 1 2 4 3
+printf "\033[1;31mThis is the test  with : \033[0;32m 1 3 2 4\033[0m\n"
+./a.out 1 3 2 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 1 3 4 2\033[0m\n"
+./a.out 1 3 4 2
+printf "\033[1;31mThis is the test  with : \033[0;32m 1 4 2 3\033[0m\n"
+./a.out 1 4 2 3
+printf "\033[1;31mThis is the test  with : \033[0;32m 1 4 3 2\033[0m\n"
+./a.out 1 4 3 2
+printf "\033[1;31mThis is the test  with : \033[0;32m 2 1 3 4\033[0m\n"
+./a.out 2 1 3 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 2 1 4 3\033[0m\n"
+./a.out 2 1 4 3
+printf "\033[1;31mThis is the test  with : \033[0;32m 2 3 1 4\033[0m\n"
+./a.out 2 3 1 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 2 3 4 1\033[0m\n"
+./a.out 2 3 4 1
+printf "\033[1;31mThis is the test  with : \033[0;32m 2 4 1 3\033[0m\n"
+./a.out 2 4 1 3
+printf "\033[1;31mThis is the test  with : \033[0;32m 2 4 3 1\033[0m\n"
+./a.out 2 4 3 1
+printf "\033[1;31mThis is the test  with : \033[0;32m 3 1 2 4\033[0m\n"
+./a.out 3 1 2 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 3 1 4 2\033[0m\n"
+./a.out 3 1 4 2
+printf "\033[1;31mThis is the test  with : \033[0;32m 3 2 1 4\033[0m\n"
+./a.out 3 2 1 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 3 2 4 1\033[0m\n"
+./a.out 3 2 4 1
+printf "\033[1;31mThis is the test  with : \033[0;32m 3 4 1 2\033[0m\n"
+./a.out 3 4 1 2
+printf "\033[1;31mThis is the test  with : \033[0;32m 3 4 2 1\033[0m\n"
+./a.out 3 4 2 1
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 1 2 3\033[0m\n"
+./a.out 4 1 2 3
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 1 3 2\033[0m\n"
+./a.out 4 1 3 2
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 2 1 3\033[0m\n"
+./a.out 4 2 1 3
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 2 3 1\033[0m\n"
+./a.out 4 2 3 1
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 3 1 2\033[0m\n"
+./a.out 4 3 1 2
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 3 2 1\033[0m\n"
+./a.out 4 3 2 1
+
+
+# TEST FOR 5
+printf "\n\n\e[1;94m------TESTING FOR 5 DIGITS------\e[0m\n\n"
+printf "\033[1;31mThis is the test  with : \033[0;32m 4 3 2 1 5\033[0m\n"
+./a.out 1 2 3 5 4
+printf "\033[1;31mThis is the test  with : \033[0;32m 5 4 2 3 1\033[0m\n"
+./a.out 5 4 2 3 1
+printf "\033[1;31mThis is the test  with : \033[0;32m \"5 4 2 3 1\"\033[0m\n"
+./a.out "5 4 2 3 1"
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
+printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
+ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./a.out $ARG 
 
 
 

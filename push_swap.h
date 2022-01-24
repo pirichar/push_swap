@@ -69,6 +69,6 @@ void	rrr(t_stacks *src);
 
 void	small_sort(t_stacks *stacks);
 bool 	is_in_order(t_stack *to_check);
-int	find_0(t_stacks *stacks);
+int		find_max_a(t_stacks *stacks);
 
 

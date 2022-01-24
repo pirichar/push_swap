@@ -29,56 +29,62 @@ static void	sort_2(t_stacks *stacks)
 	if (stacks->a.numbers[0] < stacks->a.numbers[1])
 	{
 		sa(stacks);
-		print_all_stack(stacks);
 	}
 }
 
 static void	sort_3(t_stacks *stacks)
 {
-	if (stacks->a.numbers[stacks->a.count - 1] == 0)
-	{
-		pb(stacks);
-		if (stacks->a.numbers[1] > stacks->a.numbers[2])
-			sa(stacks);
-		pa(stacks);
-		print_all_stack(stacks);
-	}
-	if (stacks->a.numbers[stacks->a.count -1] == 1)
-	{
-		sa(stacks);
-		if (stacks->a.numbers[stacks->a.count - 1] == 2)
-			ra(stacks);
-		print_all_stack(stacks);
-	}
-	if (stacks->a.numbers[stacks->a.count -1] == 2)
-	{
+	int max;
+
+	max = find_max_a(stacks);
+	if (max == stacks->a.numbers[1])
+		rra(stacks);
+	else if (max == stacks->a.numbers[2])
 		ra(stacks);
-		if (stacks->a.numbers[stacks->a.count - 1] == 1)
-			sa(stacks);
-		print_all_stack(stacks);
-	}
+	if (!is_in_order(&stacks->a))
+		sa(stacks);
 }
 
-int	find_0(t_stacks *stacks)
+int	find_max_a(t_stacks *stacks)
+{
+	int i;
+	int max;
+
+	i = 0;
+	max = stacks->a.numbers[0];
+	while(i < stacks->a.count)
+	{
+		if (max < stacks->a.numbers[i])
+			max = stacks->a.numbers[i];
+		i++;
+	}
+	return (max);
+}
+
+static void	sort_4_5(t_stacks *stacks)
 {
 	int i;
 
-	i = 0;
-	while(i < stacks->a.count)
+	if (stacks->a.count == 5)
+		i = (stacks->c.count / 2) + 1;
+	else
+		i = stacks->c.count / 2;
+	while(stacks->a.count > 3)
 	{
-		if (stacks->a.numbers[i] == 0)
-			return (i);
-		i++;
+		// printf("This is stacks->a.numbers[stacks->a.count-1] = %d\n", stacks->a.numbers[stacks->a.count -1]);
+		// printf("This is stacks->c.count = %d\n", stacks->c.count);
+		// printf("this is i %d\n", i);
+		if(stacks->a.numbers[stacks->a.count -1] < i - 1)
+			pb(stacks);
+		else
+			ra(stacks); 
 	}
-	return (-1);
+	sort_3(stacks);
+	while (stacks->b.count > 0)
+		pa(stacks);
+	if (stacks->a.numbers[stacks->a.count -1] != 0)
+		sa(stacks);
 }
-
-/*static void	sort_4(t_stacks *stacks)
-{
-	
-
-
-}*/
 
 void	small_sort(t_stacks *stacks)
 {
@@ -91,6 +97,7 @@ void	small_sort(t_stacks *stacks)
 		sort_2(stacks);
 	else if (stacks->a.count == 3)
 		sort_3(stacks);
-	/*else if (stacks->a.count == 4)
-		sort_4(stacks);*/
+	else 
+		sort_4_5(stacks);
+	print_all_stack(stacks);	
 }
