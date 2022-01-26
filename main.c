@@ -6,11 +6,13 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/23 10:13:48 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:50:30 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+//void free_stacks(t_stacks to_free)
 
 int	main(int argc, char **argv)
 {
@@ -23,18 +25,10 @@ int	main(int argc, char **argv)
 	printf("I have a total of %d ints to play with\n", ft_wd_count(argc, argv));
 	init_stacks(argc, argv, &arr);
 	print_all_stack(&arr);
-	/*pb(&arr);
-	print_all_stack(&arr);
-	sa(&arr);
-	print_all_stack(&arr);
-	pa(&arr);
-	print_all_stack(&arr);
-	ra(&arr);
-	print_all_stack(&arr);*/
 
-	//Before to sort I should change the numbers of my stack A 
 	if(arr.a.count < 6)
 		small_sort(&arr);
-	/*(else
-		b_sort(&arr);*/
+	else
+		big_sort(&arr);
+	print_all_stack(&arr);
 }
