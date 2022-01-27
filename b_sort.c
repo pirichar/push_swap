@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 17:43:28 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/26 15:44:54 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/27 09:32:34 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ static void	sort_a(t_stacks *s, int *pushed)
 	int	c;
 
 	mid = find_middle(&s->a);
-	c = s->a.count / 2;
+	if (s->a.count % 2 == 0)
+		c = s->a.count / 2;
+	else
+		c = (s->a.count / 2) + 1;
 	while (s->a.count > c)
 	{
 		if (s->a.count == 2)
@@ -67,7 +70,8 @@ static int	find_middle_b(t_stacks *s, int pushed)
 		else
 			i++;
 	}
-	return ((arr[pushed / 2]) - 1);
+	
+	return ((arr[pushed / 2]));
 }
 
 static void	sort_3_b(t_stacks *s)
@@ -95,6 +99,7 @@ void	big_sort(t_stacks *s)
 	int	pushed;
 	int r_back;
 	int	i;
+//	int j;
 	int mid;
 
 	pushed = 0;
@@ -108,7 +113,9 @@ void	big_sort(t_stacks *s)
 		sa(s);
 
 	i = pushed;
+//	j = i / 2 + 1;
 	mid = find_middle_b(s, i);
+//	while(s->b.count > j)
 	while(pushed > 0)
 	{
 		if (pushed == 1)
@@ -117,7 +124,7 @@ void	big_sort(t_stacks *s)
 			pushed--;
 			return;
 		}
-		else if (pushed == 2)
+		if (pushed == 2)
 		{
 			if(s->b.numbers[s->b.count -1] < s->b.numbers[s->b.count - 2])
 				sb(s);
@@ -126,7 +133,7 @@ void	big_sort(t_stacks *s)
 			pushed = 0;
 			return;
 		}
-		else if(pushed == 3)
+		if(pushed == 3)
 		{
 			sort_3_b(s);
 			pushed = 2;
@@ -137,7 +144,8 @@ void	big_sort(t_stacks *s)
 		// Then I could find my mid point and try to compare 
 		// Then I could just check if my top is > then my 
 		//if(s->b.numbers[s->b.count - 1] == (s->a.numbers[s->a.count - 1]) - 1)
-		else if(s->b.numbers[s->b.count - 1] > mid)
+		else if(s->b.numbers[s->b.count - 1] > mid ||
+		 s->b.numbers[s->b.count - 1] == (s->a.numbers[s->a.count -1 ]) - 1)
 		{
 			pa(s);
 			pushed--;
