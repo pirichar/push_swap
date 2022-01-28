@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:35 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/26 15:44:52 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/28 13:37:18 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,7 @@ void	big_sort(t_stacks *s);
 int		find_max_b(t_stacks *stacks);
 int		find_middle(t_stack *s);
 
+//les fonctions de MIKE
+void	sort_big(t_stacks *s);
+void	sort_b(t_stacks *s);
 

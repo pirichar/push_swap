@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/27 07:56:00 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/28 13:28:47 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int	main(int argc, char **argv)
 	if(arr.a.count < 6)
 		small_sort(&arr);
 	else
-		big_sort(&arr);
+		sort_big(&arr);
 	print_all_stack(&arr);
 }

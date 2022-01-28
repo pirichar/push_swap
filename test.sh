@@ -7,7 +7,7 @@ make -C libft
 # ca s'apelle ft parceque gcc sait que les librarires commencent toujours par lib
 # -I. veut dire ya des .h dans le dossier dans lequel tu es
 
-gcc -Wall -Werror -Wextra -Llibft -lft -I. -g parse.c main.c init_stacks.c stacks.c push.c swap.c rotate.c rev_rotate.c sorts.c s_sort.c b_sort.c stacks2.c
+gcc -Wall -Werror -Wextra -Llibft -lft -I. -g parse.c main.c init_stacks.c stacks.c push.c swap.c rotate.c rev_rotate.c sorts.c s_sort.c b_sort.c stacks2.c m_sort.c
 # TESTING THE INTPUT PART 
 
 # #test for 2
@@ -125,22 +125,22 @@ printf "\n\n\e[1;94m------TESTING FOR 12 DIGITS------\e[0m\n\n"
 # ./a.out 11 1 2 12 3 7 4 6 10 9 8 5
 # printf "\033[1;31mThis is the test  with : \033[0;32m 9 5 4 10 8 6 2 7 1 3 11 12\033[0m\n"
 # ./a.out 9 5 4 10 8 6 2 7 1 3 11 12
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 10 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..19).to_a.shuffle.join(' ')"`; ./a.out $ARG  
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 13 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..22).to_a.shuffle.join(' ')"`; ./a.out $ARG  
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
+# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
+# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
 printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
 ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 13 numbers \033[0m\n"
-ARG=`ruby -e "puts (10..22).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
-# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
-# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
-# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
-# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
-# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
-# ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
 # printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
 # ARG=`ruby -e "puts (10..21).to_a.shuffle.join(' ')"`; ./a.out $ARG  
 # printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 12 numbers \033[0m\n"
