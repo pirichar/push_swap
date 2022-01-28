@@ -26,7 +26,7 @@ int		average(t_stack *s)
 		sum += s->numbers[i];
 		i++;
 	}
-	return ((float)(sum) / (int)(s->count + 0.5f)); // wtf c quoi ca criss le type cast de float et le + 0.5f
+	return ((float)(sum) / (int)(s->count + 0.5f));
 }
 
 bool	contains_smaller(t_stack *s, int max)
@@ -126,7 +126,7 @@ void	split_b_higher(t_stacks *s, int mid)
 	int	count;
 
 	count = s->b.count;
-	while (count -- > 0)
+	while (count-- > 0)
 	{
 		if (front_b_is_next(s))
 		{
@@ -174,7 +174,7 @@ void	sort_b(t_stacks *s)
 		return ;
 	b_max = stack_max(&s->b);
 	split_b_higher(s, average(&s->b));
-	while (front_a_is_next(s) && front(&s->a != 0)) // probleme ici et je ne comprend pas pk il verifie le NULL ?
+	while (front_a_is_next(s) && front(&s->a) != 0) // probleme ici et je ne comprend pas pk il verifie le NULL ?
 		ra(s);
 	sort_b(s);
 	push_a_top(s, b_max);
