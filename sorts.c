@@ -57,7 +57,7 @@ bool	is_in_order(t_stack *to_check)
 	int	i;
 
 	i = 0;
-	while (i < to_check->count)
+	while (i < to_check->count - 1)
 	{
 		if (to_check->numbers[i + 1] > to_check->numbers[i])
 			return (false);

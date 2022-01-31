@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:35 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/28 14:04:15 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/31 09:41:12 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,3 +78,4 @@ int		find_middle(t_stack *s);
 void	sort_big(t_stacks *s);
 void	sort_b(t_stacks *s);
 
+void	strarr_free(char **arr);

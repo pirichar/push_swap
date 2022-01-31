@@ -95,7 +95,6 @@ int		stack_min(t_stack *s)
 	return (min);
 }
 
-//Ok je comprend pas le return de celle -la wtf 
 static	bool	front_b_is_next(t_stacks *s)
 {
 	return(front(&s->b) == 0 || front(&s->b) == back(&s->a) + 1);  
@@ -174,8 +173,13 @@ void	sort_b(t_stacks *s)
 		return ;
 	b_max = stack_max(&s->b);
 	split_b_higher(s, average(&s->b));
-	while (front_a_is_next(s) && front(&s->a) != 0) // probleme ici et je ne comprend pas pk il verifie le NULL ?
-		ra(s);
+	while (front_a_is_next(s) && front(&s->a) != 0)
+	{
+		if (front(&s->b) < average(&s->b))
+			rr(s);
+		else
+			ra(s);
+	}
 	sort_b(s);
 	push_a_top(s, b_max);
  }

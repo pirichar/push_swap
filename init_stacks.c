@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/22 16:47:46 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/31 09:39:55 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	init_stacks(int argc, char **argv, t_stacks *arr)
 	{
 		tmp = ft_split(argv[1], ' ');
 		count = ft_wd_count_s(tmp);
-		//free tmp here
+		strarr_free(tmp);
 		arr->a.numbers = malloc(sizeof(int) * count);
 		arr->b.numbers = malloc(sizeof(int) * count);
 		arr->c.numbers = malloc(sizeof(int) * count);
@@ -75,7 +75,6 @@ void	init_small_array(char **argv, t_stack *arr)
 
 	tmp = ft_split(argv[1], ' ');
 	count = ft_wd_count_s(tmp);
-	//free tmp here
 	i = 0;
 	while (tmp[i])
 	{
@@ -84,6 +83,7 @@ void	init_small_array(char **argv, t_stack *arr)
 		i++;
 		count--;
 	}	
+	free (tmp);
 }
 
 void	init_big_array(int argc, char **argv, t_stack *arr)

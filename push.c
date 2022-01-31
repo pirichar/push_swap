@@ -33,9 +33,6 @@ static void	push(t_stack *s, int n)
 
 void	pa(t_stacks *src)
 {
-	int	tmp;
-
-	tmp = 0;
 	if (src->b.count > 0)
 	{
 		push(&src->a, pop(&src->b));
@@ -45,9 +42,6 @@ void	pa(t_stacks *src)
 
 void	pb(t_stacks *src)
 {
-	int	tmp;
-
-	tmp = 0;
 	if (src->a.count > 0)
 	{
 		push(&src->b, pop(&src->a));

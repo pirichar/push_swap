@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:25 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/12 16:20:19 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/31 09:40:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,10 +110,11 @@ int	s_argv1(char **argv)
 	{
 		if (check_is_int(rtn[i]) == 0)
 		{
-			printf("You provided a string with other stuff then ints\n");
+			strarr_free(rtn);
 			return (0);
 		}
 		i++;
 	}
+	strarr_free(rtn);
 	return (1);
 }

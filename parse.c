@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:25 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/14 13:00:34 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/31 09:42:32 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,16 @@ int	check_is_int(char *str)
 	return (1);
 }
 
+void strarr_free(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+}
+
 int	s_argv1(char **argv)
 {
 	char	**rtn;
@@ -94,8 +104,12 @@ int	s_argv1(char **argv)
 	while (rtn[i])
 	{
 		if (check_is_int(rtn[i]) == 0)
+		{
+			strarr_free(rtn);
 			return (0);
+		}
 		i++;
 	}
+	strarr_free(rtn);
 	return (i);
 }

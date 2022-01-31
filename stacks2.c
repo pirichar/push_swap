@@ -30,5 +30,6 @@ int		find_middle(t_stack *s)
 	// print_a_stack(&tmp);
 
 	rtn = tmp.numbers[tmp.count / 2];
+	free (tmp.numbers);
 	return (rtn);
 }
