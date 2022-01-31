@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stacks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:13:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 09:39:36 by mleblanc         ###   ########.fr       */
+/*   Updated: 2022/01/31 13:08:45 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
