@@ -41,3 +41,35 @@ int	find_middle(t_stack *s)
 	free (tmp.numbers);
 	return (rtn);
 }
+
+int		stack_max(t_stack *s)
+{
+	int	i;
+	int	max;
+
+	max = back(s);
+	i = 1;
+	while(i < s->count)
+	{
+		if (max < s->numbers[i])
+			max = s->numbers[i];
+		i++;
+	}
+	return (max);
+}
+
+int		stack_min(t_stack *s)
+{
+	int	i;
+	int	min;
+
+	min = back(s);
+	i = 1;
+	while(i < s->count)
+	{
+		if (min > s->numbers[i])
+			min = s->numbers[i];
+		i++;
+	}
+	return (min);
+}

@@ -73,12 +73,7 @@ static void	sort_4_5(t_stacks *stacks)
 
 void	small_sort(t_stacks *stacks)
 {
-	if (is_in_order(&stacks->a) == true)
-	{
-		printf("\033[0;32mAllready in order\n\033[0;0m");
-		return ;
-	}
-	else if (stacks->a.count == 2)
+	if (stacks->a.count == 2)
 		sort_2(stacks);
 	else if (stacks->a.count == 3)
 		sort_3_a(stacks);

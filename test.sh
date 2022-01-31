@@ -7,7 +7,7 @@ make -C libft
 # ca s'apelle ft parceque gcc sait que les librarires commencent toujours par lib
 # -I. veut dire ya des .h dans le dossier dans lequel tu es
 
-gcc -Wall -Werror -Wextra -g parse.c main.c init_stacks.c stacks.c push.c swap.c rotate.c rev_rotate.c sorts.c s_sort.c b_sort.c stacks2.c m_sort.c -Llibft -lft -I. -o push_swap
+gcc -Wall -Werror -Wextra -g parse.c main.c init_stacks.c stacks.c push.c swap.c rotate.c rev_rotate.c sorts.c s_sort.c stacks2.c stacks3.c m_sort.c bools.c -Llibft -lft -I. -o push_swap
 # TESTING THE INTPUT PART  
 
 # #test for 2
@@ -102,7 +102,7 @@ gcc -Wall -Werror -Wextra -g parse.c main.c init_stacks.c stacks.c push.c swap.c
 
 
 
-
+# # TEST FOR 12 digits and more
 printf "\n\n\e[1;94m------TESTING FOR 12 and + DIGITS------\e[0m\n\n"
 printf "\n\n\e[1;94m------TESTING FOR 12 DIGITS------\e[0m\n\n"
 printf "\033[1;31mThis is the test  with : \033[0;32m 2 3 5 12 10 6 9 7 4 1 8 11\033[0m\n"
@@ -159,59 +159,28 @@ printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 100 number
 ARG=`ruby -e "puts (10..109).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
 printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER with 100 numbers \033[0m\n"
 ARG=`ruby -e "puts (10..109).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-#to check how many lines 
-# ( DON'T FORGET TO REMOVE ANY PRINTING FOUNCTION)
-
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
-# printf "\033[1;31mThis is the test  with : \033[0;32m RANDOMIZER \033[0m\n"
-# ARG=`ruby -e "puts (10..14).to_a.shuffle.join(' ')"`; ./push_swap $ARG | wc -l
 
 
-
-
-# TEST FOR PROBLEMS
-# printf "\n\n\e[1;94m------TESTING FOR PROBLEMS------\e[0m\n\n"
-# printf "\033[1;31mThis is the test  with : \033[0;32m1\033[0m\n"
-# ./push_swap 1
-# printf "\033[1;31mThis is the test with : \033[0;32mnothing\033[0m\n"
-# ./push_swap 
-# printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1 0 TOTO\" in a sentence \033[0m\n"
-# ./push_swap "5 4 3 2 1 0 TOTO"
-# printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 TOTO not int a sentence\033[0m\n"
-# ./push_swap 5 4 3 2 1 0 TOTO
-# printf "\033[1;31mThis is the test with : \033[0;32m TOTO \033[0m\n"
-# ./push_swap TOTO
-# printf "\033[1;31mThis is the test with : \033[0;32m-22222222222222222222 5 4 3 2 1 0 \033[0m\n"
-# ./push_swap -22222222222222222222 5 4 3 2 1 0
-# printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 -22222222222222222222\033[0m\n"
-# ./push_swap  5 4 3 2 1 0 -22222222222222222222
-# printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 -22222222222222222222 2 1 0 \033[0m\n"
-# ./push_swap  5 4 3 -22222222222222222222 2 1 0 
-# printf "\033[1;31mThis is the test  with : \033[0;32m400 3 2 7 89 30009876 489032 12 -200 487909 -20000 0\033[0m\n"
-
+#TEST FOR PROBLEMS
+printf "\n\n\e[1;94m------TESTING FOR PROBLEMS------\e[0m\n\n"
+printf "\033[1;31mThis is the test  with : \033[0;32m1\033[0m\n"
+./push_swap 1
+printf "\033[1;31mThis is the test with : \033[0;32mnothing\033[0m\n"
+./push_swap 
+printf "\033[1;31mThis is the test with : \033[0;32m1 2 3 4 5\033[0m\n"
+./push_swap 1 2 3 4 5
+printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1 0 TOTO\" in a sentence \033[0m\n"
+./push_swap "5 4 3 2 1 0 TOTO"
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 TOTO not int a sentence\033[0m\n"
+./push_swap 5 4 3 2 1 0 TOTO
+printf "\033[1;31mThis is the test with : \033[0;32m TOTO \033[0m\n"
+./push_swap TOTO
+printf "\033[1;31mThis is the test with : \033[0;32m-22222222222222222222 5 4 3 2 1 0 \033[0m\n"
+./push_swap -22222222222222222222 5 4 3 2 1 0
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 -22222222222222222222\033[0m\n"
+./push_swap  5 4 3 2 1 0 -22222222222222222222
+printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 -22222222222222222222 2 1 0 \033[0m\n"
+./push_swap  5 4 3 -22222222222222222222 2 1 0 
 
 
 
