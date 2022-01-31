@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bools.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/31 16:38:27 by pirichar          #+#    #+#             */
+/*   Updated: 2022/01/31 16:39:04 by pirichar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 bool	contains_smaller(t_stack *s, int max)
@@ -5,9 +17,9 @@ bool	contains_smaller(t_stack *s, int max)
 	int	i;
 
 	i = 0;
-	while(i < s->count)
+	while (i < s->count)
 	{
-		if(s->numbers[i] <= max)
+		if (s->numbers[i] <= max)
 			return (true);
 		i++;
 	}
@@ -16,7 +28,7 @@ bool	contains_smaller(t_stack *s, int max)
 
 bool	front_b_is_next(t_stacks *s)
 {
-	return(front(&s->b) == 0 || front(&s->b) == back(&s->a) + 1);  
+	return (front(&s->b) == 0 || front(&s->b) == back(&s->a) + 1);
 }
 
 bool	front_a_is_next(t_stacks *s)

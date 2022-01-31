@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 11:13:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 13:08:45 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/31 16:36:34 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,24 @@ void	print_a_stack(t_stack *to_print)
 	ft_putchar_fd('\n', 1);
 }
 
-void	print_all_stack(t_stacks *to_print)
+void	print_all_stack(t_stacks *s)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	j = to_print->c.count - 1;
+	j = s->c.count - 1;
 	while (j >= 0)
 	{
-		if (to_print->a.count > j)
-			printf("\033[1;32mA[%d] %-10d\033[1;0m ", i, to_print->a.numbers[j]);
+		if (s->a.count > j)
+			printf("\033[1;32mA[%d] %-10d\033[1;0m ", i, s->a.numbers[j]);
 		else
 			printf("%16c", ' ');
-		if (to_print->b.count > j)
-			printf("\033[1;31mB[%d]%-10d \033[1;0m    ", i, to_print->b.numbers[j]);
+		if (s->b.count > j)
+			printf("\033[1;31mB[%d]%-10d \033[1;0m    ", i, s->b.numbers[j]);
 		else
 			printf("%19c", ' ');
-		printf("\033[1;33mC[%d]%-10d\n\033[1;0m", i, to_print->c.numbers[j]);
+		printf("\033[1;33mC[%d]%-10d\n\033[1;0m", i, s->c.numbers[j]);
 		j--;
 		i++;
 	}

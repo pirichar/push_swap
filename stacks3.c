@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stacks3.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/31 16:37:19 by pirichar          #+#    #+#             */
+/*   Updated: 2022/01/31 16:38:22 by pirichar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int		front(t_stack *s)
+int	front(t_stack *s)
 {
 	return (s->numbers[s->count - 1]);
 }
 
-int		back(t_stack *s)
+int	back(t_stack *s)
 {
 	return (s->numbers[0]);
 }
 
-int		find_number(t_stack *s, int n)
+int	find_number(t_stack *s, int n)
 {
 	int	i;
 
@@ -24,14 +36,14 @@ int		find_number(t_stack *s, int n)
 	return (-1);
 }
 
-int		average(t_stack *s)
+int	average(t_stack *s)
 {
 	int	i;
 	int	sum;
 
 	i = 0;
 	sum = 0;
-	while(i < s->count)
+	while (i < s->count)
 	{
 		sum += s->numbers[i];
 		i++;

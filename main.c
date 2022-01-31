@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 08:42:16 by mleblanc         ###   ########.fr       */
+/*   Updated: 2022/01/31 16:39:37 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	ft_bzero(&arr, sizeof(t_stacks));
 	if (argc == 1 || parse(argc, argv) == 0)
 	{
-		write (2,"Error\n",7);
+		write (2, "Error\n", 7);
 		return (0);
 	}
 	init_stacks(argc, argv, &arr);
@@ -38,5 +38,4 @@ int	main(int argc, char **argv)
 	free(arr.a.numbers);
 	free(arr.b.numbers);
 	free(arr.c.numbers);
-
 }

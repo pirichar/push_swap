@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:08:56 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 13:09:46 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/01/31 16:37:09 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ int	find_middle(t_stack *s)
 	return (rtn);
 }
 
-int		stack_max(t_stack *s)
+int	stack_max(t_stack *s)
 {
 	int	i;
 	int	max;
 
 	max = back(s);
 	i = 1;
-	while(i < s->count)
+	while (i < s->count)
 	{
 		if (max < s->numbers[i])
 			max = s->numbers[i];
@@ -58,14 +58,14 @@ int		stack_max(t_stack *s)
 	return (max);
 }
 
-int		stack_min(t_stack *s)
+int	stack_min(t_stack *s)
 {
 	int	i;
 	int	min;
 
 	min = back(s);
 	i = 1;
-	while(i < s->count)
+	while (i < s->count)
 	{
 		if (min > s->numbers[i])
 			min = s->numbers[i];
