@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 16:39:37 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/02 13:43:11 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	init_stacks(argc, argv, &arr);
-	// print_all_stack(&arr);
 	if (is_in_order(&arr.a))
 		return (0);
 	if (arr.a.count < 6)
 		small_sort(&arr);
 	else
 		sort_big(&arr);
-	// if(is_in_order(&arr.a))
-	// 	dprintf(2, "IS IN ORDER\n");
-	// print_all_stack(&arr);
 	free(arr.a.numbers);
 	free(arr.b.numbers);
 	free(arr.c.numbers);
