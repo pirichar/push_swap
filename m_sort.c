@@ -64,7 +64,7 @@ static	void	push_a_top(t_stacks *s, int max)
 		sort_b(s);
 }
 
-static	void	sort_b(t_stacks *s)
+void	sort_b(t_stacks *s)
 {
 	int	b_max;
 
