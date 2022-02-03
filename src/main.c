@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/02 18:55:31 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:32:42 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	main(int argc, char **argv)
 	t_stacks	arr;
 
 	ft_bzero(&arr, sizeof(t_stacks));
-	if (argc == 1 || parse(argc, argv) == 0)
+	if (argc < 2)
+		return (0);
+	if (parse(argc, argv) == 0)
 	{
 		write (2, "Error\n", 7);
 		return (0);
