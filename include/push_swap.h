@@ -6,12 +6,12 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:35 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/03 10:21:52 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:03:45 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #ifndef PUSH_SWAP_H
-// # define PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <unistd.h>
 # include <stdio.h>
@@ -87,3 +87,5 @@ bool	front_b_is_next(t_stacks *s);
 bool	front_a_is_next(t_stacks *s);
 bool	should_sort_b(t_stacks *s);
 void	split_a_lower(t_stacks *s, int mid);
+
+#endif
