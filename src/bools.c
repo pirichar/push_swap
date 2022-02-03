@@ -6,11 +6,11 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 16:38:27 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 16:39:04 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/02 18:43:43 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./include/push_swap.h"
 
 bool	contains_smaller(t_stack *s, int max)
 {

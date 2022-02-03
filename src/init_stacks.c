@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mleblanc <mleblanc@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/01/31 09:39:55 by mleblanc         ###   ########.fr       */
+/*   Updated: 2022/02/02 18:55:17 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

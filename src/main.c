@@ -6,13 +6,11 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:30 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/02 13:43:11 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/02 18:55:31 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-//void free_stacks(t_stacks to_free)
 
 int	main(int argc, char **argv)
 {

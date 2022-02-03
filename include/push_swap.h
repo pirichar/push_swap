@@ -6,19 +6,20 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:35 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/02 13:43:02 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:15:16 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+// #ifndef PUSH_SWAP_H
+// # define PUSH_SWAP_H
 
+# include <unistd.h>
 # include <stdio.h>
 # include <stddef.h>
 # include <stdlib.h>
-# include <libft/libft.h> 
 # include <stdbool.h>
 # include "colors.h"
+# include "libft.h"
 
 typedef struct s_stack
 {
