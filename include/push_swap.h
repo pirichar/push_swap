@@ -49,6 +49,7 @@ void	c_value_a_c(t_stacks *s);
 void	bubblesort_stack(t_stack *to_sort);
 void	rev_bubblesort_stack(t_stack *to_sort);
 void	print_a_stack(t_stack *to_print);
+void	print_all_stack(t_stacks *s);
 void	copy_stack(t_stack *src, t_stack *dst);
 
 //Toutes les commandes utilisables
