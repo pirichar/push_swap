@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:21 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/02 18:55:17 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/14 12:41:31 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	init_small_array(char **argv, t_stack *arr)
 		i++;
 		count--;
 	}	
-	free (tmp);
+	strarr_free (tmp);
 }
 
 void	init_big_array(int argc, char **argv, t_stack *arr)
