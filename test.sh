@@ -12,6 +12,9 @@
 #to test in evals
 #ARG=`ruby -e "puts (10..109).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker_MAC $ARG
 
+#to show your algo during the exam
+#python3 pyviz.py `ruby -e "puts (0..20).to_a.shuffle.join(' ')"`
+
 # TESTING THE INTPUT PART  
 make push_swap
 #test for 2
