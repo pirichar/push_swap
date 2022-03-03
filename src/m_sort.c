@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 16:33:38 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/23 12:02:17 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/02/28 07:32:23 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ Elle sera appelé en récursion à travers sort b
 
 L'option 1 est que le chiffre est le next ( 0 ou back + 1)
 Dans ce cas je pousse vers A et je rotate pour sort ce chiffre
+Ce qui fait en sorte de trier les chiffre 
+par en bas dans le stack a
 
 Tant que j'ai plus de 13 chiffres : 
 Si mon front de b est plus grand que mon mid je le pousse à A 

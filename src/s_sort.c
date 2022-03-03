@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 16:43:04 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/02 18:57:22 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:07:41 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	find_max_a(t_stacks *stacks)
 	int	max;
 
 	i = 0;
-	max = stacks->a.numbers[0];
+	max = back(&stacks->a);
 	while (i < stacks->a.count)
 	{
 		if (max < stacks->a.numbers[i])
@@ -48,6 +48,14 @@ int	find_max_a(t_stacks *stacks)
 	}
 	return (max);
 }
+
+/* 
+Pour sort 4_5 c'est assez simple;
+On cherche les 2 plus petit ;
+On les envoie à droite;
+Puis finalement on fait un sort3;
+On repousse sur a et on fait un sa au besoin
+*/
 
 static void	sort_4_5(t_stacks *stacks)
 {
@@ -59,7 +67,7 @@ static void	sort_4_5(t_stacks *stacks)
 		i = stacks->c.count / 2;
 	while (stacks->a.count > 3)
 	{
-		if (stacks->a.numbers[stacks->a.count -1] < i - 1)
+		if (front(&stacks->a) < i - 1)
 			pb(stacks);
 		else
 			ra(stacks);
@@ -67,7 +75,7 @@ static void	sort_4_5(t_stacks *stacks)
 	sort_3_a(stacks);
 	while (stacks->b.count > 0)
 		pa(stacks);
-	if (stacks->a.numbers[stacks->a.count -1] != 0)
+	if (front(&stacks->a) != 0)
 		sa(stacks);
 }
 

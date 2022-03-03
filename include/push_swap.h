@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:35 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/03 12:03:45 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/03/03 00:07:47 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_stacks
 	t_stack	b;
 	t_stack	c;
 }				t_stacks;
+
 //Parsing and checking functions
 int		parse(int argc, char **argv);
 int		check_is_int(char *str);
