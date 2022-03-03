@@ -205,6 +205,8 @@ printf "\033[1;31mThis is the test with : \033[0;32m1 2 3 4 5\033[0m\n"
 ./push_swap 1 2 3 4 5
 printf "\033[1;31mThis is the test with : \033[0;32m1 2 3 4 5 5\033[0m\n"
 ./push_swap 1 2 3 4 5 5
+printf "\033[1;31mThis is the test with : \033[0;32m1 2 3 4 5 5 in a string\033[0m\n"
+./push_swap "1 2 3 4 5 5"
 printf "\033[1;31mThis is the test with : \033[0;32m\"5 4 3 2 1 0 TOTO\" in a sentence \033[0m\n"
 ./push_swap "5 4 3 2 1 0 TOTO"
 printf "\033[1;31mThis is the test with : \033[0;32m5 4 3 2 1 0 TOTO not int a sentence\033[0m\n"

@@ -6,7 +6,7 @@
 /*   By: pirichar <pirichar@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 12:24:25 by pirichar          #+#    #+#             */
-/*   Updated: 2022/02/02 18:55:59 by pirichar         ###   ########.fr       */
+/*   Updated: 2022/03/03 17:55:31 by pirichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,10 @@ int	s_argv1(char **argv)
 {
 	char	**rtn;
 	int		i;
+	int		j;
 
 	i = 0;
+	j = 1;
 	rtn = ft_split(argv[1], ' ');
 	while (rtn[i])
 	{
@@ -108,7 +110,14 @@ int	s_argv1(char **argv)
 			strarr_free(rtn);
 			return (0);
 		}
+		while (rtn[j])
+		{
+			if (ft_atol(rtn[i]) == ft_atol(rtn[j]))
+				return (0);
+			j++;
+		}
 		i++;
+		j = i + 1;
 	}
 	strarr_free(rtn);
 	return (i);
